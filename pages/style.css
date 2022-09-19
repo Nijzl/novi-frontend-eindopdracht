@@ -227,6 +227,10 @@ nav .fa{
         font-size: 22px;
         cursor: pointer;
     }
+    nav img{
+        width: 75px;
+        margin-top: 10px;
+    }
     .nav-links ul{
         padding: 30px;
     }
@@ -308,6 +312,7 @@ h3{
 }
 
 .staff-fav-col img{
+    height: 100%;
     width: 100%;
     border-radius: 10px;
     display: block;
@@ -459,3 +464,21 @@ h3{
 
 /* FOOTER */
 
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    padding: 18px 0;
+    cursor: pointer;
+}
