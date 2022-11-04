@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title> Novi Frontend Eindopdracht - Contact Page </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--  <script src="../js/contact.js"> </script> -->
+</head>
+<body>
+<header>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="../assets/food-findr-logo.png" alt="An image of the Food Findr logo."></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">QUIZ</a></li>
+          <li><a href="">RECIPES</a></li>
+          <li><a href="">REVIEWS</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+    <h1> Contact </h1>
+
+  </section>
+</header>
+
+  <div class="container">
+    <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+      <h3> CONTACT US</h3>
+      <input type="text" id="name" placeholder="Enter name" required>
+      <input type="email" id="email" placeholder="Enter email" required>
+      <input type="text" id="phone" placeholder="Enter phone number" required>
+      <textarea id="message" rows="5" placeholder="Send us a message!"></textarea>
+      <button type="submit"> SEND </button>
+
+    </form>
+  </div>
+
+
+
+<!------------------ JAVASCRIPT SEND EMAIL ------------------>
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+  function sendEmail(){
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "smtp username",
+      Password : "smtp password",
+      To : "lotte.nijzink@gmail.com",
+      From : document.getElementById("email").value,
+      Subject : "New Contact Form",
+      Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Phone number: " + document.getElementById("phone").value
+        + "<br> Message: " + document.getElementById("message").value
+    }).then(
+            message => alert("Message Sent Succesfully")
+    );
+  }
+</script>
+
+<!------------------ JAVASCRIPT TOGGLE RESPONSIVE NAV MENU ------------------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</script>
+
+</body>
+</html>
