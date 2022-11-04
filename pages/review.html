@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title> Novi Frontend Eindopdracht - Review Page </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--  <script src="../js/index.js"> </script> -->
+</head>
+<body>
+<header>
+  <section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="../assets/food-findr-logo.png" alt="An image of the Food Findr logo."></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">HOME</a></li>
+          <li><a href="">QUIZ</a></li>
+          <li><a href="">RECIPES</a></li>
+          <li><a href="">LEAVE A REVIEW</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+
+      <h1> Reviews </h1>
+
+  </section>
+</header>
+
+<main>
+  <section class="review-content">
+    <div class="row">
+      <div class="review-left">
+        <img src="../assets/review.png">
+        <h2> Reviews </h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <br>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <br>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <br>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+        <div class="comment-box">
+          <h3> Leave a review </h3>
+
+          <form class="comment-form">
+            <input type="text" placeholder="Enter name">
+            <input type="email" placeholder="Enter email">
+            <textarea rows="5" placeholder="Your review"></textarea>
+            <button type="submit" class="red-btn"> POST REVIEW</button>
+
+          </form>
+
+        </div>
+
+      </div>
+      <div class="review-right">
+        <h3> Post Categories </h3>
+        <div>
+          <span> Accessibility </span>
+          <span> 5 </span>
+        </div>
+        <div>
+          <span> Content </span>
+          <span> 6 </span>
+        </div>
+        <div>
+          <span> Design </span>
+          <span> 12 </span>
+        </div>
+        <div>
+          <span> Esthetic </span>
+          <span> 32 </span>
+        </div>
+        <div>
+          <span> Performance </span>
+          <span> 9 </span>
+        </div>
+        <div>
+          <span> Security </span>
+          <span> 15 </span>
+        </div>
+        <div>
+          <span> SEO </span>
+          <span> 17 </span>
+        </div>
+        <div>
+          <span> URL </span>
+          <span> 3 </span>
+        </div>
+        <div>
+          <span> Web Standards </span>
+          <span> 20 </span>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+
+</main>
+
+<!------------------ FOOTER ------------------>
+<footer>
+
+  <section class="footer">
+    <h4>About us</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="icons">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-linkedin"></i>
+    </div>
+  </section>
+</footer>
+
+
+<!------------------ JAVASCRIPT TOGGLE RESPONSIVE NAV MENU ------------------>
+<script>
+  var navLinks = document.getElementById("navLinks");
+  function showMenu(){
+    navLinks.style.right = "0";
+  }
+  function hideMenu(){
+    navLinks.style.right = "-200px";
+  }
+</script>
+</body>
+</html>
